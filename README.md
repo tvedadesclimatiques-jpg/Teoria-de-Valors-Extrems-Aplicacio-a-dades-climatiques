@@ -19,10 +19,6 @@ Crida:
 python fitting_entregable.py
 ```
 
-Llegeix:
-- `Dades/series_extrems_fabra.parquet`
-- `Dades/series_extrems_ebre.parquet`
-
 Genera les figures dels ajustos de la distribució.
 
 També genera la taula LaTeX per a fer el resum dels paràmetres. 
