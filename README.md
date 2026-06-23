@@ -3,19 +3,17 @@ Aquest repositori guarda el codi necessari per a fer l'estudi estadístic del Tr
 
 ## Analisi descriptiva de les dades
 
+Crida:
+
 ```bash
 python Analisi_dades_entregable.py
 ```
 
-Llegeix:
-- `Dades/t_1880_2024_mx_mm.dat`
-- `Dades/PPT_TX_TN_diari_1914-2024.txt`
-
-Genera les figures a:
-- `analisi_ebre_output_entregable/`
-- `analisi_fabra_output_entregable/`
+Genera les figures d'anàlisi de les dades.
 
 ## Ajust GEV per maxims de bloc
+
+Crida:
 
 ```bash
 python fitting_entregable.py
@@ -25,35 +23,28 @@ Llegeix:
 - `Dades/series_extrems_fabra.parquet`
 - `Dades/series_extrems_ebre.parquet`
 
-Genera les figures a:
-- `plots/Fittings_max_hessian_fabra_ebre/`
+Genera les figures dels ajustos de la distribució.
 
-Genera la taula LaTeX:
-- `../Teoria_de_Valors_Extrems__Aplicació_a_dades_climàtiques/resum_gev_estacionaria_entregable.tex`
+També genera la taula LaTeX per a fer el resum dels paràmetres. 
 
-Opcionalment, tambe es pot ajustar el model no estacionari `mu(t)=mu0+mu1*t`:
+Opcionalment, tambe es pot ajustar el model no estacionari `mu(t)=mu0+mu1*t` amb la crida:
 
 ```bash
 python fitting_entregable.py --mu_linear
 ```
 
-Aixo genera tambe:
-- `../Teoria_de_Valors_Extrems__Aplicació_a_dades_climàtiques/resum_mu_linear_entregable.tex`
+Aixo genera la taula de LaTeX que agrupa els resultats.
 
 ## Ajust GPD per excedencies
+
+Crida:
 
 ```bash
 python fitting_GPD_entregable.py
 ```
 
-Llegeix:
-- `Dades/series_extrems_fabra.parquet`
-- `Dades/series_extrems_ebre.parquet`
+Durant l'execucio, el programa mostra grafics per la seleccio de llindar i demana introduir manualment el valor `u` per a cada serie. Es pot escriure el decimal amb punt o coma.
 
-Durant l'execucio, el programa mostra grafics de seleccio de llindar i demana introduir manualment el valor `u` per a cada serie. Es pot escriure el decimal amb punt o coma.
+Genera les figures dels ajustos de la distribució.
 
-Genera les figures a:
-- `plots/Fittings_GPD_entregable/`
-
-Genera la taula LaTeX:
-- `../Teoria_de_Valors_Extrems__Aplicació_a_dades_climàtiques/resum_gpd_entregable.tex`
+També genera la taula LaTeX per a fer el resum dels paràmetres. 
